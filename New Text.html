@@ -1,0 +1,156 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i">
+		
+		
+  <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/mediaelement-and-player.min.js"></script>
+<!-- Add any other renderers you need; see Use Renderers for more information -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/mediaelementplayer.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/mediaelementplayer.min.css" />
+        <link rel="stylesheet" href="https://www.mediaelementjs.com/css/mejs-site.css">
+
+
+
+
+<style>
+.mejs__overlay-button {
+	background-image: url("https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/src/css/mejs-controls.svg");
+}
+.mejs__overlay-loading-bg-img {
+	background-image: url("https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/src/css/mejs-controls.svg");
+}
+.mejs__button > button {
+	background-image: url("https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/src/css/mejs-controls.svg");
+}
+</style>
+  
+     <!-- player demos -->
+        <section class="players">
+
+            <div class="container">
+			
+                <div class="media-container">
+                    <h4><a id="audio-player" class="anchor" href="#audio-player" aria-hidden="true">
+                        <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <div class="clearfix">
+                            <span class="title">Audio Player</span>
+                            <select name="player2-sources" id="player2-sources">
+                                <option value="">Select source</option>
+                                <option value="https://eez.ymcdn.fun/029820c6d18ab117498587e06a32ee55/ljLvWAv0BNs">MP3</option>
+
+                            </select>
+                        </div>
+                    </h4>
+
+                    <div class="player">
+                        <audio id="player2" preload="none" controls style="max-width: 100%">
+                            <source src="https://eez.ymcdn.fun/029820c6d18ab117498587e06a32ee55/ljLvWAv0BNs" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+			
+   <div class="media-container">
+                    <h4><a id="video-player" class="anchor" href="#video-player" aria-hidden="true">
+                        <span aria-hidden="true" class="octicon octicon-link"></span></a>
+                        <div class="clearfix">
+                            <span class="title">Video Player</span>
+                            <select name="player1-sources" id="player1-sources">
+                                <option value="">Select source</option>
+                                <option value="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4</option>
+                                <!--<option value="https://upload.wikimedia.org/wikipedia/commons/2/22/Volcano_Lava_Sample.webm">WebM</option>-->
+                                <!--<option value="rtmp://184.72.239.149/vod/BigBuckBunny_115k.mov">RTMP</option>-->
+                                <!--<option value="rtmp://firehose.cul.columbia.edu:1935/vod/mp4:sample.mp4">RTMP</option>-->
+                                <option value="http://www.streambox.fr/playlists/test_001/stream.m3u8">HLS</option>
+                                <option value="http://la2.indexcom.com/me/flv/guqin.flv">FLV</option>
+                                <option value="http://www.bok.net/dash/tears_of_steel/cleartext/stream.mpd">M(PEG)-DASH</option>
+                                <!--<option value="http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd">M(PEG)-DASH</option>-->
+                                <option value="https://www.dailymotion.com/video/x11prnt">DailyMotion</option>
+                                <option value="https://www.youtube.com/watch?v=twYp6W6vt2U">YouTube</option>
+                                <option value="https://player.vimeo.com/video/108018156?title=0&amp;byline=0&amp;portrait=0&amp;badge=0">Vimeo</option>
+                                <option value="https://www.facebook.com/facebook/videos/10155278547321729">Facebook</option>
+                                <option value="https://www.twitch.tv/videos/109010497">Twitch</option>
+                            </select>
+                        </div>
+                    </h4>
+
+                    <div class="player">
+                        <video id="player1" width="640" height="360" preload="none" style="max-width: 100%" controls poster="images/big_buck_bunny.jpg" playsinline webkit-playsinline>
+                            <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                            <track src="dist/mediaelement.vtt" srclang="en" label="English" kind="subtitles" type="text/vtt">
+                        </video>
+                    </div>
+                </div>
+                </div>
+        </section><!-- /.players -->
+
+ <!-- JS -->
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/mediaelement-and-player.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/renderers/dailymotion.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/renderers/facebook.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/renderers/soundcloud.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/renderers/twitch.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.14/build/renderers/vimeo.min.js"></script>
+        <script src="https://buttons.github.io/buttons.js"></script>
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <script>
+
+            var
+                sourcesSelector = document.body.querySelectorAll('select'),
+		        sourcesTotal = sourcesSelector.length
+            ;
+
+            for (var i = 0; i < sourcesTotal; i++) {
+                sourcesSelector[i].addEventListener('change', function (e) {
+                    var
+                        media = e.target.closest('.media-container').querySelector('.mejs__container').id,
+                        player = mejs.players[media]
+                    ;
+
+                    player.setSrc(e.target.value.replace('&amp;', '&'));
+                    player.setPoster('');
+                    player.load();
+
+                });
+
+                // These media types cannot play at all on iOS, so disabling them
+                if (mejs.Features.isiOS) {
+			        if (sourcesSelector[i].querySelector('option[value^="rtmp"]')) {
+                        sourcesSelector[i].querySelector('option[value^="rtmp"]').disabled = true;
+                    }
+                    if (sourcesSelector[i].querySelector('option[value$="webm"]')) {
+                        sourcesSelector[i].querySelector('option[value$="webm"]').disabled = true;
+                    }
+                    if (sourcesSelector[i].querySelector('option[value$=".mpd"]')) {
+                        sourcesSelector[i].querySelector('option[value$=".mpd"]').disabled = true;
+                    }
+			        if (sourcesSelector[i].querySelector('option[value$=".ogg"]')) {
+                        sourcesSelector[i].querySelector('option[value$=".ogg"]').disabled = true;
+                    }
+			        if (sourcesSelector[i].querySelector('option[value$=".flv"]')) {
+                        sourcesSelector[i].querySelector('option[value*=".flv"]').disabled = true;
+        		    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
+                for (var i = 0; i < total; i++) {
+                    new MediaElementPlayer(mediaElements[i], {
+                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
+                        shimScriptAccess: 'always',
+                        success: function () {
+                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                            for (var j = 0; j < targetTotal; j++) {
+                                target[j].style.visibility = 'visible';
+                            }
+			            }
+		            });
+                }
+            });
+        </script>
+
