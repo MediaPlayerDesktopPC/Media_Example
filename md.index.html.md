@@ -1,8 +1,8 @@
 
-```md
+```html
 <center>
 
-<!--
+
 
 
 
@@ -23,7 +23,7 @@ $('video').mkhPlayer(); // for video file
 			});
 		</script>
 
--->
+
 
 
 
